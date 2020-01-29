@@ -44,5 +44,5 @@ echo "<br><hr>";
 
 //$_SESSION
 echo "$_SESSION<br>";
-
+echo "ver na pasta 18 - sessoes<br>";
 echo "<br><hr>";
