@@ -1,5 +1,5 @@
 <?php
-  $credentials = file_get_contents('../credentials.json');
+  $credentials = file_get_contents('/var/www/html/projetos/credentials.json');
   $credentials = json_decode($credentials);
 
   $serverName = 'localhost';
@@ -25,6 +25,7 @@
 
 
   $connect = mysqli_connect($serverName, $username, $password, $db_name);
+  mysqli_set_charset($connect, "utf8");
 
   if(!$connect){
     $errors[] = "<li>connection failed: ".mysqli_connect_error()."</li>";
@@ -35,7 +36,7 @@
       sobreNome VARCHAR(255) NOT NULL,
       email VARCHAR(255) NOT NULL,
       idade INT NOT NULL
-    )";
+    ) DEFAULT CHARSET=utf8";
     if(mysqli_query($connect, $sql)){
       // echo "<li>table created successfully</li>";
     } else {

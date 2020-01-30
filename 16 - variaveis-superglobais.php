@@ -39,7 +39,7 @@ echo "<br><hr>";
 
 //$_COOKIE
 echo "$_COOKIE<br>";
-
+echo "ver no arquivo 23 - cookie<br>";
 echo "<br><hr>";
 
 //$_SESSION
